@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Item Form</h1>
+    <p>Enter Item name:   </p>
+        <br>
+            <form action="/store_detail" method="post">
+                <input type="hidden" item="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_name">Name</span>
+                    <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_item">Price</span>
+                    <input type="text" class="form-control" name="price" aria-label="Sizing example input" aria-describedby="inputGroup_price">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}
